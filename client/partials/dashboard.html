@@ -1,0 +1,41 @@
+<div class="background_style" id="other_pages">
+	<div class="container-fluid" >
+		<div class="col-md-2">
+			<div class="row">
+				<input type="text" class="form-control" ng-model = "filter_name" placeholder="search...">
+			</div><br>
+		</div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="col-md-12" ng-controller="productsController as pc">
+					<ul class ="list-inline">
+						<li ng-repeat="product in pc.products | filter: filter_name | limitTo: 5">	
+							<img src="{{product.product_url}}" alt="{{product.product_name}}" height = "200" width = "155">
+							<p class="text-center" ng-bind ="product.product_name"></p>
+							<p class="text-center">(<span ng-bind ="product.product_qty"> </span>&nbsp;left)</p>
+						</li>
+						<a href="#/products"><p class="text-center">Show more..</p></a>
+					</ul>
+				</div>		
+			</div>
+			<div class="row">
+				<div class="col-md-7" ng-controller="ordersController as oc">
+					<h4><u>Recent Orders</u></h4>
+					<ul>
+						<p ng-repeat = "order in oc.orders | orderBy: '-created_at'| limitTo: 3 ">{{order.customer_name}} purchase {{order.qty}} DVD(s) of {{order.product_name}}... (<span am-time-ago="order.created_at"></span>)</p>
+						<a href="#/orders"><p class="text-center">Show more..</p></a>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-7" ng-controller="customersController as cc">
+					<h4><u>New Customers</u></h4>
+					<ul>
+						<p ng-repeat = "customer in cc.customers | orderBy: '-created_at'| limitTo: 3">{{customer.name}} joined the store. (<span am-time-ago="customer.created_at"></span>)</p>
+						<a href="#/customers"><p class="text-center">Show more..</p></a>
+					</ul>		
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

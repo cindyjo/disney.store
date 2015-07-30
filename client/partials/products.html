@@ -1,0 +1,48 @@
+<div class="background_style" id="other_pages">	
+	<div class="container-fluid" ng-controller="productsController as pc">
+		<div class="col-md-2">
+			<div class="row">
+				<input type="text" class="form-control" ng-model = "filter_name" placeholder="search...">
+			</div><br><br>
+			<div class="row">
+				<h4><u>Add a new product</u></h4>
+			</div>
+			<div class="row">
+				<form>
+					<div class="form-group">
+						<label>Name</label>
+						<input type="text" class="form-control" ng-model ="pc.newProduct.product_name"placeholder="name...">
+					</div>
+					<div class="form-group">
+						<label>Image (url):</label>
+						<input type="text" class="form-control" ng-model ="pc.newProduct.product_url" placeholder="http://">
+					</div>
+					<div class="form-group">
+						<label>Description:</label>
+						<textarea class="form-control" rows="4" ng-model ="pc.newProduct.product_description"></textarea>
+					</div>
+					<select class="form-control" ng-model ="pc.newProduct.product_qty">
+						<option></option>
+						<option ng-repeat = "qty in pc.qty">{{qty.qty}}</option>
+					</select><br>
+					<div class=" col-md-offset-7 col-md-5">
+						<input type="submit" class="btn btn-default" ng-click = "pc.addProduct()" value="Create"/>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="col-md-12">
+					<ul class ="list-inline">
+						<li ng-repeat="product in pc.products | filter: filter_name">	
+							<img src="{{product.product_url}}" alt="{{product.product_name}}" height = "200" width = "155">
+							<p class="text-center" ng-bind ="product.product_name"></p>
+							<p class="text-center">(<span ng-bind ="product.product_qty"> </span>&nbsp;left)</p>
+						</li>
+					</ul>
+				</di>
+			</div>
+		</div>
+	</div>
+</div>

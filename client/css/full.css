@@ -1,0 +1,39 @@
+/*!
+ * Start Bootstrap - Full HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+#home{
+   	overflow: hidden;
+}
+.background_style {
+	height: 0;
+	padding: 0;
+	padding-bottom: 75%;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	}
+#main_page {
+	background-image: url('../img/castle.jpg');
+}
+#other_pages {
+	overflow: scroll;
+	background-image: url('../img/background.jpg');
+}
+#nav{
+    background: #00003D;
+    margin-bottom: 0px;
+
+}
+.container-fluid{
+	margin-top: -20px;
+	padding-top: 40px;
+}
+.navbar {
+	margin-bottom: 0px;
+}
