@@ -6,34 +6,48 @@
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
-#home{
-   	overflow: hidden;
-}
+/*#home{
+ */  	/*overflow: hidden;*/
+/*}*/
 .background_style {
 	height: 0;
 	padding: 0;
-	padding-bottom: 75%;
+	padding-bottom: 60%;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	}
+}
 #main_page {
-	background-image: url('../img/castle.jpg');
+	background-image: url('../img/tinkerbell01.jpg');
+	overflow: hidden;
 }
-#other_pages {
-	overflow: scroll;
-	background-image: url('../img/background.jpg');
-}
-#nav{
-    background: #00003D;
-    margin-bottom: 0px;
 
+#nav{
+    margin-bottom: 0px;
 }
-.container-fluid{
-	margin-top: -20px;
-	padding-top: 40px;
+.nav-list, .navbar-brand {
+	color: #FFFFEA !important;
 }
-.navbar {
-	margin-bottom: 0px;
+
+.h1-welcome {
+	font-family: 'Tangerine', serif;
+    font-size: 95px;
+    color: #FFFFE3;
+    font-weight: 600;
+}
+#welcome {
+	margin-left: 50px;
+}
+#welcome-msg {
+	margin-left: 80px;
+	margin-top: 240px;
+}
+#footer-text {
+	padding-top: 5px;
+	text-align: center;
+	color: #FFFFE3;
+}
+footer{
+	border-radius: 0 !important;
 }
