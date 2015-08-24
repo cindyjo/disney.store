@@ -6,13 +6,11 @@
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
-/*#home{
- */  	/*overflow: hidden;*/
-/*}*/
+/* home.html styling */
 .background_style {
 	height: 0;
 	padding: 0;
-	padding-bottom: 60%;
+	padding-bottom: 48%;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -41,8 +39,12 @@
 }
 #welcome-msg {
 	margin-left: 80px;
-	margin-top: 240px;
+	margin-top: 170px;
 }
+a:hover {
+	color: #955F00 !important;
+}
+/*footer styling*/
 #footer-text {
 	padding-top: 5px;
 	text-align: center;

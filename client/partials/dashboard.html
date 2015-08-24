@@ -1,5 +1,5 @@
 <div id="other_pages">
-	<div class="container-fluid" >
+	<div class="container" >
 		<div class="col-md-2">
 			<div class="row">
 				<input type="text" class="form-control" ng-model = "filter_name" placeholder="search...">
@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-md-12" ng-controller="productsController as pc">
 					<ul class ="list-inline">
-						<li ng-repeat="product in pc.products | filter: filter_name | limitTo: 5">	
+						<li ng-repeat="product in pc.products | filter: filter_name | limitTo: 4">	
 							<img src="{{product.product_url}}" alt="{{product.product_name}}" height = "200" width = "155">
 							<p class="text-center" ng-bind ="product.product_name"></p>
 							<p class="text-center">(<span ng-bind ="product.product_qty"> </span>&nbsp;left)</p>
